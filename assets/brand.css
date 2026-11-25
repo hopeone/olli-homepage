@@ -1,0 +1,202 @@
+.brand-site {
+  background: #0b1020;
+}
+.brand-site .wrap {
+  max-width: 1200px;
+}
+.brand-site .brand span, .brand-hero h1 span {
+  color: var(--accent);
+}
+.brand-site a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.brand-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 32px 0 0;
+  padding: clamp(28px, 6vw, 76px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: radial-gradient(ellipse at 80% 30%, #1e3b68, transparent 72%), #111a30;
+}
+.home-hero {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 24px;
+}
+.brand-hero h1 {
+  margin: 0;
+  font-size: clamp(2.15rem, 5.4vw, 4.75rem);
+  line-height: 1.16;
+  letter-spacing: -.065em;
+  word-break: keep-all;
+}
+.brand-hero .lead {
+  max-width: 40ch;
+  margin: 20px 0 26px;
+  word-break: keep-all;
+}
+.hero-art {
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: min(100%, 290px);
+  aspect-ratio: 1;
+  border: 1px solid #6fa8ff52;
+  border-radius: 50%;
+  background: radial-gradient(circle, #284b84, #132849 66%, #345995 67%, transparent 68%);
+  box-shadow: 0 0 0 16px #82b5ff0a, 0 0 0 34px #82b5ff09;
+  color: #e6f1ff;
+  font-size: clamp(1.8rem, 5vw, 4rem);
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+.hero-art span span {
+  color: var(--accent);
+}
+.brand-section {
+  padding: 44px 0;
+}
+.brand-section h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -.035em;
+}
+.app-grid, .screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.app-card, .download-panel {
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #17243d, #111a2e);
+}
+.app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.app-icon {
+  display: block;
+  flex: none;
+  border-radius: 24%;
+  object-fit: contain;
+}
+.app-card h3, .screenshot-slot h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+.app-card .app-icon {
+  margin-bottom: 20px;
+}
+.app-card h3 span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 500;
+}
+.app-card p, .about-layout p, .download-panel p, .screenshot-slot p {
+  color: var(--muted);
+  word-break: keep-all;
+}
+.app-card p {
+  margin: 12px 0 0;
+}
+.card-link {
+  margin-top: auto;
+  padding-top: 20px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.card-link:hover, .footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.brand-about {
+  border-top: 1px solid var(--line);
+}
+.about-layout p {
+  margin: 0;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+.product-hero .app-icon {
+  margin-bottom: 24px;
+}
+.product-hero h1 span {
+  font-size: .56em;
+  white-space: nowrap;
+}
+.screenshot-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.screenshot-slot {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 200px;
+  padding: 20px;
+  border: 1px dashed #4c6387;
+  border-radius: 18px;
+  background: #111a2e;
+  text-align: center;
+}
+.screenshot-slot p, .download-panel p {
+  margin: 8px 0 0;
+}
+.screenshot-grid img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+.release-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin: 0 0 16px;
+}
+.release-info dt, .release-info dd span {
+  color: var(--muted);
+  font-size: .875rem;
+}
+.release-info dd {
+  margin: 2px 0 0;
+}
+@media (max-width: 1023px) {
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 650px) {
+  .brand-site .wrap {
+    padding-inline: 18px;
+  }
+  .brand-hero {
+    margin-top: 20px;
+  }
+  .home-hero, .app-grid, .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-art {
+    display: none;
+  }
+  .brand-section {
+    padding: 32px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.brand-site) {
+    scroll-behavior: auto;
+  }
+}
