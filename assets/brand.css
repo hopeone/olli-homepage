@@ -173,6 +173,38 @@
 .release-info dd {
   margin: 2px 0 0;
 }
+.download-panel .play-status {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: .9rem;
+  font-weight: 700;
+}
+.release-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.release-actions .card-link {
+  margin-top: 0;
+  padding-top: 0;
+}
+.install-guide {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.install-guide h3 {
+  margin: 0;
+}
+.install-guide ol {
+  margin: 8px 0 12px;
+  padding-inline-start: 1.5em;
+  color: var(--muted);
+}
+.install-guide li + li {
+  margin-top: 4px;
+}
 @media (max-width: 1023px) {
   .app-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
